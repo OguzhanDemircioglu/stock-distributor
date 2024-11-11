@@ -1,4 +1,4 @@
-package com.techie.microservices.product.dto;
+package com.stock.distributor.productservice.app.dto;
 
 import java.math.BigDecimal;
 

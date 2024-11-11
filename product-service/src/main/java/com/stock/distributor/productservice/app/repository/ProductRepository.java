@@ -1,6 +1,6 @@
-package com.techie.microservices.product.repository;
+package com.stock.distributor.productservice.app.repository;
 
-import com.techie.microservices.product.model.Product;
+import com.stock.distributor.productservice.app.model.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface ProductRepository extends MongoRepository<Product, String> {

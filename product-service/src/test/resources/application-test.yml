@@ -1,4 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: ${env.MYSQL_DATABASE_TEST_URL}
+      uri: ${env.MONGO_DATABASE_URL}

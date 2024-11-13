@@ -1,0 +1,43 @@
+version: 4.35.1
+services:
+#  keycloak:
+#    container_name: keycloak
+#    image: quay.io/keycloak/keycloak:24.0.1
+#    command: [ "start-dev", "--import-realm" ]
+#    environment:
+#      DB_VENDOR: MYSQL
+#      DB_ADDR: your-cloud-database-endpoint  # Bulut veritabanınızın adresi
+#      DB_DATABASE: your_database_name          # Bulut veritabanınızdaki veritabanı adı
+#      DB_USER: your_database_user              # Bulut veritabanı kullanıcı adı
+#      DB_PASSWORD: your_database_password      # Bulut veritabanı kullanıcı şifresi
+#      KEYCLOAK_ADMIN: admin                    # Keycloak yönetici kullanıcı adı
+#      KEYCLOAK_ADMIN_PASSWORD: admin           # Keycloak yönetici şifresi
+#    ports:
+#      - "8181:8080"                            # Keycloak'ın dışarıya açılan portu
+#    volumes:
+#      - ./docker/keycloak/realms/:/opt/keycloak/data/import/  # Realm verilerini içe aktarmak için klasör
+#  inventory-service:
+#    build:
+#      context: ./inventory-service
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8081:8081"
+#  order-service:
+#    build:
+#      context: ./order-service
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8082:8082"
+#  product-service:
+#    build:
+#      context: ./product-service
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8083:8083"
+#  gateway:
+#    build:
+#      context: ./api-gateway
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8080:8080"
+

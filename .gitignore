@@ -33,3 +33,7 @@ build/
 ### VS Code ###
 .vscode/
 .mvn
+
+/docker/keycloak/realms/
+/docker/keycloak/
+/docker/

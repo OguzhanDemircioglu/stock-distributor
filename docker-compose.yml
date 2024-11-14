@@ -5,11 +5,11 @@ services:
     command: [ "start-dev", "--import-realm" ]
     environment:
       DB_VENDOR: MYSQL
-      DB_ADDR: mysql-keya.l.aivencloud.com
-      DB_PORT: 15474
-      DB_DATABASE: hcsdk
-      DB_USER: avnadmin
-      DB_PASSWORD: AVNS_SlvQiEmwZxpPck8I0OT
+      DB_ADDR: ${MYSQL_DATABASE_HOST}
+      DB_PORT: ${MYSQL_DATABASE_PORT}
+      DB_DATABASE: ${MYSQL_DB_DATABASE}
+      DB_USER: ${MYSQL_DATABASE_USERNAME}
+      DB_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
       JDBC_PARAMS: "sslMode=REQUIRED"

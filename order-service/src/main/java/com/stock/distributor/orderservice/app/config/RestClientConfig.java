@@ -1,7 +1,6 @@
 package com.stock.distributor.orderservice.app.config;
 
 import com.stock.distributor.orderservice.app.client.InventoryClient;
-import io.micrometer.observation.ObservationRegistry;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.ClientHttpRequestFactories;
@@ -26,6 +25,7 @@ public class RestClientConfig {
     public InventoryClient inventoryClient() {
         RestClient restClient = RestClient.builder()
                 .baseUrl(inventoryServiceUrl)
+                .requestFactory(getClientRequestFactory())
                 .build();
         var restClientAdapter = RestClientAdapter.create(restClient);
         var httpServiceProxyFactory = HttpServiceProxyFactory.builderFor(restClientAdapter).build();

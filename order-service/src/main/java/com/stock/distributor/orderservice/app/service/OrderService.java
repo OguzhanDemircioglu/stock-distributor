@@ -20,19 +20,20 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
 
-    public void placeOrder(OrderRequest orderRequest) {
+    public String placeOrder(OrderRequest orderRequest) {
 
         boolean returnValue = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
 
-        if(returnValue) {
+        if (returnValue) {
             Order order = new Order();
             order.setOrderNumber(UUID.randomUUID().toString());
             order.setPrice(orderRequest.price().multiply(BigDecimal.valueOf(orderRequest.quantity())));
             order.setSkuCode(orderRequest.skuCode());
             order.setQuantity(orderRequest.quantity());
             orderRepository.save(order);
-        }else {
-            throw new RuntimeException("Product with sku code " + orderRequest.skuCode() + " is not in stock");
+            return "Order Placed Successfully";
+        } else {
+            return "Product with sku code " + orderRequest.skuCode() + " is not in stock";
         }
     }
 
@@ -44,6 +45,6 @@ public class OrderService {
                         data.getSkuCode(),
                         data.getPrice(),
                         data.getQuantity()))
-                        .toList();
+                .toList();
     }
 }

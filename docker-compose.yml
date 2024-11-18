@@ -24,6 +24,15 @@ services:
       interval: 30s
       retries: 3
 
+#  angular-frontend:
+#    build:
+#      context: ./frontend
+#      dockerfile: Dockerfile
+#    ports:
+#      - "4200:4200"
+#    networks:
+#      - microservice_network
+
 #  inventory-service:
 #    build:
 #      context: ./inventory-service

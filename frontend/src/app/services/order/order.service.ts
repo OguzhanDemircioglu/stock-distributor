@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {Product} from "../../model/product";
+import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Order} from "../../model/order";
@@ -19,6 +18,6 @@ export class OrderService {
       }),
       responseType: 'text' as 'json'
     };
-    return this.httpClient.post<string>('http://localhost:8000/api/order', order, httpOptions);
+    return this.httpClient.post<string>('http://localhost:9000/api/order', order, httpOptions);
   }
 }

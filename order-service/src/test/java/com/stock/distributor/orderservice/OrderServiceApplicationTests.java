@@ -12,7 +12,7 @@ import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureWireMock(port = 8081)
+@AutoConfigureWireMock(port = 9001)
 class OrderServiceApplicationTests {
 
     @LocalServerPort

@@ -17,9 +17,9 @@ import static org.springframework.cloud.gateway.server.mvc.handler.GatewayRouter
 @Configuration
 public class Routes {
 
-    String inventoryServiceUrl = "http://localhost:8081";
-    String orderServiceUrl = "http://localhost:8082";
-    String productServiceUrl = "http://localhost:8083";
+    String inventoryServiceUrl = "http://localhost:9001";
+    String orderServiceUrl = "http://localhost:9002";
+    String productServiceUrl = "http://localhost:9003";
 
     @Bean
     public RouterFunction<ServerResponse> productServiceRoute() {

@@ -34,11 +34,6 @@ build/
 .vscode/
 .mvn
 
-/docker/keycloak/realms/
-/docker/keycloak/
-/docker/
-
-
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 node_modules
 .angular
